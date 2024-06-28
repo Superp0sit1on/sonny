@@ -1,0 +1,18 @@
+[[source]]
+url = "https://pypi.org/simple"
+verify_ssl = true
+name = "pypi"
+
+[packages]
+colorama = "*"
+twitchio = "*"
+
+[dev-packages]
+black = "*"
+isort = "*"
+
+[scripts]
+bot = "python src/bot.py"
+
+[requires]
+python_version = "3.12"
