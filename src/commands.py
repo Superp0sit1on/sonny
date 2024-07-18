@@ -28,6 +28,10 @@ class BotCommands(commands.Cog):
         await ctx.send("❤️ YouTube: https://www.youtube.com/@superp0sit1on")
         await ctx.send("💜 Discord: thinking about it...")
 
+    @commands.command(name="ping")
+    async def cmd_ping(self, ctx: commands.Context):
+        await ctx.send(f"pong! 🏓")
+
     @commands.command(name="specs")
     async def cmd_specs(self, ctx: commands.Context):
         await ctx.send(f"{ctx.author.name}, here are our current specs:")
