@@ -103,7 +103,7 @@ pipenv run bot
 
 ### 🚀 Deploy
 
-Currently hosted on Heroku and running 24/7, you can check our [Heroku deployment documentation](https://sonny.juliomartins.dev/guide/heroku) for more info on how to deploy the chatbot to Heroku.
+Currently hosted on Heroku and running 24/7, you can check our [Heroku deployment documentation](https://sonny.juliomartins.dev/guides/heroku) for more info on how to deploy the chatbot to Heroku.
 
 &nbsp;
 

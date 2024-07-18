@@ -1,0 +1,34 @@
+---
+title: Sonny
+description: Chatbot named and inspired by the Sonny character from the "I, Robot" movie of 2004, and used on my Twitch channel.
+template: splash
+hero:
+  tagline: Twitch chatbot inspired by the character of "I, Robot" movie of 2004, and built with Python and TwitchIO.
+  image:
+    file: ../../assets/robot.webp
+  actions:
+    - text: Get started
+      link: /getting-started
+      icon: right-arrow
+      variant: primary
+    - text: View on Twitch
+      link: https://twitch.tv/superp0sit1on
+      icon: external
+---
+
+import { Card, CardGrid } from "@astrojs/starlight/components";
+
+<CardGrid stagger>
+  <Card title="Built with Python & TwitchIO" icon="seti:python">
+    Powered by the simplicity and comprehensiveness of Python, and TwitchIO, a Python library for Twitch chatbots.
+  </Card>
+  <Card title="Fully-modular" icon="puzzle">
+    Built with a modular architecture, so you can add or remove features as you want.
+  </Card>
+  <Card title="Documented with Starlight" icon="starlight">
+    The most used and comprehensive Astro documentation toolkit.
+  </Card>
+  <Card title="Forever open-source!" icon="github">
+    Sonny is open-source and will always be, so you can feel free to contribute or use it as you want.
+  </Card>
+</CardGrid>

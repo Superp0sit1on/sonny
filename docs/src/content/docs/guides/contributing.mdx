@@ -1,0 +1,74 @@
+---
+title: Contributing
+description: A quick guide on how to contribute with the project.
+---
+
+import { Tabs, TabItem } from "@astrojs/starlight/components";
+
+Here you can fing a quick guide on how to contribute with the project.
+
+## Steps to follow
+
+### Fork the repository
+
+First, you need to fork the repository to your GitHub account. Click on the "Fork" button on the top right corner of the repository page.
+
+### Create a branch
+
+Create a new branch based on the `develop` branch with a objective name for your contribution:
+
+```bash title="Terminal"
+git checkout -b feature/your-feature-name develop
+```
+
+### Develop your changes
+
+If you need help to quickstart the local environment, check the [Getting Started](/getting-started) guide.
+
+### Preparing the commit
+
+After all changes done, check for lint errors and format the code:
+
+<Tabs>
+    <TabItem label="Chatbot" icon="seti:python">
+        ```bash title="Terminal"
+        pipenv run isort . && pipenv run black .
+        ```
+    </TabItem>
+    <TabItem label="Documentation" icon="starlight">
+        <Tabs>
+            <TabItem label="npm" icon="seti:npm">
+                ```bash title="Terminal"
+                npm run lint && npm run format
+                ```
+            </TabItem>
+            <TabItem label="pnpm" icon="pnpm">
+                ```bash title="Terminal"
+                pnpm run lint && pnpm run format
+                ```
+            </TabItem>
+            <TabItem label="yarn" icon="seti:yarn">
+                ```bash title="Terminal"
+                yarn run lint && yarn run format
+                ```
+            </TabItem>
+            <TabItem label="bun" icon="bun">
+                ```bash title="Terminal"
+                bun run lint && bun run format
+                ```
+            </TabItem>
+        </Tabs>
+    </TabItem>
+</Tabs>
+
+### Opening a pull request
+
+All done? Now you can push your changes to your forked repository and open a pull request to wait for a review.
+
+:::note
+Don't forget to correctly describe your changes within the commits and the pull request.
+:::
+
+## Further reading
+
+- Be sure to read and follow all of the rules on our [code of conduct](https://github.com/Superp0sit1on/sonny/blob/main/CODE_OF_CONDUCT.md).

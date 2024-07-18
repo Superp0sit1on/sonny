@@ -1,0 +1,53 @@
+---
+title: Managing Modules
+description: A quick guide on how to manage the chatbot modules.
+---
+
+Here you can find a quick guide on how to manage the modules of the chatbot.
+
+## Removing modules
+
+### Greetings module
+
+If you don't want the greetings module, you can delete the `src/greetings.py` and the `src/supress.py` files, and remove the following lines from the `src/bot.py` file:
+
+```python title="src/bot.py" del={2, 7, 20}
+...
+from greetings import Greetings
+
+class Bot(commands.Bot):
+    def __init__(self):
+        ...
+        self.greetings = Greetings()
+
+    ...
+
+    async def event_message(self, message):
+        datetime = message.timestamp.strftime("%d/%m/%Y %H:%M:%S")
+        if message.echo:
+            print(Fore.BLUE + f"🤖 | {datetime} | @{self.nick}: {message.content}.")
+        else:
+            print(
+                Fore.GREEN
+                + f"💬 | {datetime} | @{message.author.name}: {message.content}."
+            )
+            await self.greetings.handle_greeting(message)
+            await self.handle_commands(message)
+...
+```
+
+### Pride module
+
+If you don't want the pride module, you can delete the `src/pride.py` file, and remove the following lines from the `src/bot.py` file:
+
+```python title="src/bot.py" del={2, 8}
+...
+from pride import setup as pride_setup
+
+
+class Bot(commands.Bot):
+    def __init__(self):
+        ...
+        pride_setup(self)
+...
+```

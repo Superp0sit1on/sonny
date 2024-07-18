@@ -1,0 +1,81 @@
+---
+title: Project Structure
+description: A quick overview on how the project is structured.
+---
+
+import { FileTree } from "@astrojs/starlight/components";
+
+Here we can see a quick overview of the project structure.
+
+<FileTree>
+
+- .github github templates and settings
+  - ISSUE_TEMPLATE
+    - bug_report.md
+    - feature_request.md
+  - FUNDING.yml github sponsors
+  - PULL_REQUEST_TEMPLATE.md
+- docs/ documentation source code
+- src/ chatbot source code
+- .gitignore
+- CODE_OF_CONDUCT.md
+- CONTRIBUTING.md
+- LICENSE
+- PREVIEW.gif
+- README.md
+- ...
+
+</FileTree>
+
+## Chatbot
+
+Here we can see a quick overview of the bot structure.
+
+<FileTree>
+
+- ...
+- **src**
+  - bot.py **main bot file**
+  - commands.py command handlers
+  - config.py environment variables loader
+  - greetings.py greetings module
+  - pride.py pride module
+  - suppress.py suppress utility
+- .env environment variables
+- Pipfile python dependencies
+- Procfile heroku deployment settings
+- ...
+
+</FileTree>
+
+## Documentation
+
+Here we can see a quick overview of this documentation structure.
+
+
+<FileTree>
+
+- docs
+  - public public assets
+    - favicon.svg
+  - src
+    - assets/ images and other assets
+    - content documentation routing
+      - **docs** pages content
+        - guides
+          - project-structure.mdx **this current page**
+          - ...
+        - reference/
+        - resources/
+        - index.mdx home page file
+        - ...
+      - ...
+  - ...
+  - astro.config.mjs astro configuration
+  - package.json node.js dependencies
+- ...
+
+</FileTree>
+
+:::note
+With the use some Astro's JavaScript components, such as the File Tree component, was decided to adopt the `.mdx` extension for all documentation pages.

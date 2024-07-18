@@ -1,0 +1,37 @@
+{
+  "name": "sonny-docs",
+  "version": "1.1.0",
+  "description": "Sonny chatbot documentation",
+  "homepage": "https://sonny.juliomartins.dev",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Superp0sit1on/sonny.git"
+  },
+  "author": "Júlio Martins <hi@juliomartins.dev> (https://juliomartins.dev)",
+  "license": "MIT",
+  "type": "module",
+  "scripts": {
+    "dev": "astro dev",
+    "start": "astro dev",
+    "build": "astro check && astro build",
+    "preview": "astro preview",
+    "astro": "astro",
+    "lint": "eslint .",
+    "format": "prettier . --write"
+  },
+  "dependencies": {
+    "@astrojs/check": "^0.7.0",
+    "@astrojs/starlight": "^0.24.4",
+    "astro": "^4.10.2",
+    "sharp": "^0.32.5",
+    "typescript": "^5.5.2"
+  },
+  "devDependencies": {
+    "@typescript-eslint/parser": "^7.14.1",
+    "eslint": "^8.57.0",
+    "eslint-plugin-astro": "^1.2.2",
+    "eslint-plugin-jsx-a11y": "^6.9.0",
+    "prettier": "^3.3.2",
+    "prettier-plugin-astro": "^0.14.0"
+  }
+}

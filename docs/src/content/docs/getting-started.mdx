@@ -1,0 +1,64 @@
+---
+title: Getting Started
+description: A quickstart guide on how to run the chatbot.
+---
+
+Sonny is a chatbot built with Python, TwitchIO, hosted on Heroku, and named and inspired by the Sonny character from the "[I, Robot](<https://en.wikipedia.org/wiki/I,_Robot_(film)>)" movie of 2004, and used on my [Twitch channel](https://twitch.tv/Superp0sit1on).
+
+## Quick Start
+
+### Clone the repository
+
+Open your terminal and run the following command:
+
+```bash title="Terminal"
+git clone https://github.com/Superp0sit1on/sonny.git
+```
+
+### Install the dependencies
+
+On the terminal, navigate to the project's root directory and run the following command:
+
+```bash title="Terminal"
+pipenv install
+```
+
+### Setup the environment variables
+
+Create a `.env` file in the root directory with your chatbot credentials and definitions. Example:
+
+```env title=".env"
+TOKEN=oauth:****
+NICKNAME=chatbot_username # Your Twitch channel if it doesn't have a separate chatbot account
+CHANNELS=your_channel
+BOTS=example_bot, another_example_bot
+```
+
+:::note
+You can get your chatbot token from the [Twitch Apps TMI](https://twitchapps.com/tmi) website.
+:::
+
+### Run the local environment
+
+On the terminal, run the following command:
+
+```bash title="Terminal"
+pipenv run bot
+```
+
+:::caution
+Don't forget to grant mod privileges with `/mod nameofyourbot` to your chatbot on your Twitch channel if it runs under a different account.
+:::
+
+### Next Steps
+
+- **Project Structure:** Learn how the project is structured in ["Project Structure"](/guides/project-structure).
+- **Commands:** Learn how to write your own commands in ["Writing Commands"](/guides/writing-commands).
+- **Modules:** Learn how to manage modules in ["Managing Modules"](/guides/managing-modules).
+- **Deploy:** Publish your chatbot on Heroku with the ["Deploying to Heroku"](/guides/deploy-to-heroku) guide.
+- **Document:** Learn how to manage and write the chatbot documentation in ["Documenting"](/guides/documenting).
+- **Contribute:** Get to know how to contribute to the project in ["Contributing"](/guides/contributing).
+
+## Troubleshooting Sonny
+
+You can create a new issue on the [GitHub repository](https://github.com/Superp0sit1on/sonny/issues) or chat with us on our [Twitch channel](https://twitch.tv/superp0sit1on) if you encounter any problems with the documentation or the project itself.
